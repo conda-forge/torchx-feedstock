@@ -1,6 +1,5 @@
 {% set name = "torchx" %}
 {% set version = "0.7.0" %}
-{% set python_min = python_min|default("3.8") %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +13,7 @@ build:
   entry_points:
     - torchx = torchx.cli.main:main
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
